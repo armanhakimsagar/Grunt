@@ -28,13 +28,22 @@ module.exports = function(grunt) {
 				  ext: '.min.css'
 				}]
 			  }
-			}
+			},
+			
+			  uglify: {
+				my_target: {
+				  files: {
+					'dest/output.min.js': ['build/scripts.js']
+				  }
+				}
+			  }
 							 
 		 });
 		 
 		
 		// after config we need to load it 
 		grunt.loadNpmTasks('grunt-contrib-cssmin');
+		grunt.loadNpmTasks('grunt-contrib-uglify');
 		grunt.loadNpmTasks('grunt-contrib-concat');
 		
 		// register your task for future use

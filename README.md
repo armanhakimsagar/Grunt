@@ -120,3 +120,33 @@ minify :
 	
 	
 12. cmd > grunt cssmin			[for compress file]
+
+
+
+
+
+_________________________
+
+
+Uglify (For minify js) :
+
+
+
+13. uglify: {
+	my_target: {
+	  files: {
+		'dest/output.min.js': ['build/scripts.js']
+	  }
+	}
+	
+  }	
+
+
+14. grunt.loadNpmTasks('grunt-contrib-uglify');
+ 
+ 
+15. grunt.registerTask('concat-js', ['concat:js']);
+
+					
+16. cmd > grunt uglify		[for compress file]
+
